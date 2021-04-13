@@ -1,23 +1,13 @@
 function p(ms) {
   return new Promise((resolve, reject) => {
-//p 함수가 new Promise를 return하고 있다.
     setTimeout(() => {
-      // resolve(ms);
-      reject(new Errors('reason'));
+      resolve(ms);
     }, ms);
   });
 }
 
-async function asyncP() {
-  const ms = await p(1000);
-  return 'Dalso: ' + ms;
-}
-
 (async function dalso() {
-  try {
-  const name = await asyncP();
-  console.log(name);
-} catch (error) {
-console.log(error);
-}
+  const results = await Promise.race([p(1000), p(2000), p(3000)]);
+// 3개 중 가장 빠른 p 하나만 출력될 것이다.
+  console.log(results);
 })();
