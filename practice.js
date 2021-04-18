@@ -1,24 +1,25 @@
-const todos = [{
-        id: 1,
-        text: '자바스크립트',
-        done: true,
-    },
-    {
-        id: 2,
-        text: '자바',
-        done: true,
-    },
-    {
-        id: 3,
-        text: 'C언어',
-        done: true,
-    },
-    {
-        id: 4,
-        text: '파이썬',
-        done: false,
-    }
-]
+function increaseAndPrint(n) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const value = n + 1;
+            if (value === 5) {
+                const error = new Error();
+                error.name = 'ValueIsFiveError';
+                reject(error);
+                return;
+            }
+            console.log(value);
+            resolve(value);
+        }, 1000);
+    });
+}
 
-const tasksNotDone = todos.filter(todo => !todo.done);
-console.log(tasksNotDone);
+increaseAndPrint(0)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .catch(e => {
+        console.error(e);
+    });
