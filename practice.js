@@ -1,5 +1,27 @@
-const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+function Animal(type, name, sound) {
+  this.type = type;
+  this.name = name;
+  this.sound = sound;
+}
 
-superheroes.forEach(hero => {
-    console.log(hero);
-});
+
+Animal.prototype.say = function () {
+  console.log(this.sound);
+}
+
+
+Animal.prototype.sharedValue = 1;
+
+const cat = new Animal('고양이', '소다', '야옹');
+const dog = new Animal('강아지', '바둑이', '멍멍');
+
+
+cat.sharedValue
+dog.sharedValue
+
+
+cat.say = say;
+dog.say = say;
+
+cat.say();
+dog.say();
