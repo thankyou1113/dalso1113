@@ -1,7 +1,7 @@
 function isAnimal(text) {
-    return (
-        text === '개' || text === '다람쥐' || text === '고양이' || text === '호랑이'
-    );
+    const animals = ['개', '다람쥐', '고양이', '호랑이'];
+    return animals.includes(text);
+// 배열[]안에 text가 존재하면 true, 존재하지 않으면 false
 }
 
 console.log(isAnimal('다람쥐'));
