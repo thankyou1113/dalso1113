@@ -6,9 +6,6 @@ function getSound(animal) {
         호랑이: '어흥'
     };
     return sounds[animal] || '...?';
-// animal 인자는 각 객체들을 가리킨다.
-// animal의 각 객체들을 확인한 후, 해당 객체가 없으면 ...?을 출력한다.
-
 }
 
 
