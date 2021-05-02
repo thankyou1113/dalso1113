@@ -9,5 +9,5 @@ function getSound(animal) {
 }
 
 
-console.log(getSound('쥐'));
+console.log(getSound('개'));
 console.log(getSound('인간'));
