@@ -1,13 +1,25 @@
-function getSound(animal) {
-    const sounds = {
-        개: '멍멍!',
-        고양이: '야옹~',
-        쥐: '찍찍',
-        호랑이: '어흥'
-    };
-    return sounds[animal] || '...?';
+function makeSound(animal) {
+    const tasks = {
+        개: () => {
+            console.log('멍멍!');
+        },
+        고양이() {
+            console.log('야옹~');
+        },
+        쥐: function() {
+            console.log('찍찍');
+        }
+// 위의 세 개의 객체들은 모두 같은 형식이다. 두 번째 객체가 가장 깔끔한 코드이다.
+    }
+
+    const task = tasks[animal];
+    if (!task) {
+        console.log('...?');
+        return;
+    }
+    task();
 }
 
 
-console.log(getSound('개'));
-console.log(getSound('인간'));
+makeSound('개');
+makeSound('인간');
