@@ -1,5 +1,8 @@
-const object = { a: 1 };
+const animal = {
+    name: '댕댕이',
+    type: '개'
+};
 
-const { a, b = 2} = object;
-console.log(a);
-console.log(b);
+const nickname = animal.name;
+
+console.log(nickname);
