@@ -1,8 +1,7 @@
-const animal = {
-    name: '댕댕이',
-    type: '개'
-};
+const array = [1, 2];
 
-const { name: nickname } = animal.name;
+const one = array[0];
+const two = array[1];
 
-console.log(nickname);
+console.log(one);
+console.log(two);
