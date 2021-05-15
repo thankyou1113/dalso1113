@@ -1,6 +1,19 @@
-const array = [1];
+const deepObject = {
+    state: {
+        information: {
+            name: 'Dalso',
+            languages: ['Korean', 'English', 'French', 'Chinese']
+        }
+    },
+    value: 5
+}
 
-const [one, two = 2] = array;
+const { name, languages } = deepObject.state.information;
+const { value } = deepObject;
 
-console.log(one);
-console.log(two);
+const extracted = {
+    name, 
+    languages,
+    value
+};
+console.log(extracted)
