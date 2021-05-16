@@ -8,8 +8,14 @@ const deepObject = {
     value: 5
 }
 
-const { name, languages } = deepObject.state.information;
-const { value } = deepObject;
+const {
+    state: {
+        information: {
+            name, languages
+        }
+    },
+    value
+} = deepObject;
 
 const extracted = {
     name, 
