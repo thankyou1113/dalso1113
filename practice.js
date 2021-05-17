@@ -11,7 +11,7 @@ const deepObject = {
 const {
     state: {
         information: {
-            name, languages
+            name, languages: [firstLang, secondLang, thirdLang, fourthLang]
         }
     },
     value
@@ -19,7 +19,7 @@ const {
 
 const extracted = {
     name, 
-    languages,
+    firstLang, secondLang, thirdLang, fourthLang,
     value
 };
 console.log(extracted)
