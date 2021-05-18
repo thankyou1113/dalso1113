@@ -1,25 +1,18 @@
-const deepObject = {
-    state: {
-        information: {
-            name: 'Dalso',
-            languages: ['Korean', 'English', 'French', 'Chinese']
-        }
-    },
-    value: 5
-}
-
-const {
-    state: {
-        information: {
-            name, languages: [firstLang, secondLang, thirdLang, fourthLang]
-        }
-    },
-    value
-} = deepObject;
-
-const extracted = {
-    name, 
-    firstLang, secondLang, thirdLang, fourthLang,
-    value
+const dalso = {
+    name: '달소'
 };
-console.log(extracted)
+
+const cuteDalso = {
+    name: '달소',
+    attribute: 'cute'
+};
+
+const grayCuteDalso = {
+    name: '달소',
+    attribute: 'cute',
+    color: 'gray'
+};
+
+console.log(dalso);
+console.log(cuteDalso);
+console.log(grayCuteDalso);
