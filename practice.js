@@ -3,13 +3,12 @@ const dalso = {
 };
 
 const cuteDalso = {
-    name: '달소',
+    ...dalso,
     attribute: 'cute'
 };
 
 const grayCuteDalso = {
-    name: '달소',
-    attribute: 'cute',
+    ...cuteDalso,
     color: 'gray'
 };
 
