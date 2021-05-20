@@ -2,15 +2,12 @@ const dalso = {
     name: '달소'
 };
 
-const cuteDalso = {
-    ...dalso,
-    attribute: 'cute'
-};
+const cuteDalso = dalso;
+cuteDalso.attribute = 'cute';
 
-const grayCuteDalso = {
-    ...cuteDalso,
-    color: 'gray'
-};
+const grayCuteDalso = cuteDalso;
+grayCuteDalso.color = 'gray';
+
 
 console.log(dalso);
 console.log(cuteDalso);
