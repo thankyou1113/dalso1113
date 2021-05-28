@@ -1,4 +1,5 @@
-const numbers = [0, 1, 2, 3, 4, 5, 6];
+function sum(a, b, c, d, e, f, g) {
+    return a + b + c + d + e + f + g;
+}
 
-const [...rest, last] = numbers;
-console.log(last);
+console.log(sum(1, 2, 3, 4, 5, 6, 7));
