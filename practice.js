@@ -1,13 +1,8 @@
-function sum(...rest) {
-    return rest.reduce((acc, current) => acc + current, 0);
-}
-
-console.log(sum(1, 2, 3, 4, 5, 6, 7, 8));
-
 function subtract(x, y) {
     return x - y;
 }
-// x와 y는 파라미터이다.
 
-const result = subtract(1, 2);
-// 1과 2는 인자이다.
+const numbers = [1, 2];
+const result = subtract(...numbers);
+// 여기서 ...numbers는 numbers[0], numbers[1]와 같다.
+console.log(result);
